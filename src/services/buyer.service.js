@@ -8,10 +8,12 @@ class BuyerService {
 
     async getSellerCatalog(sellerId) {
         // Logic to get seller's catalog
+        return null;
     }
 
     async createOrder(data, sellerId) {
         // Logic to create order
+        return null;
     }
 }
 

@@ -3,12 +3,12 @@ const CustomError = require("./../utils/custom-error");
 
 class SellerService {
     async createCatalog(data) {
-        // create seller catalog
+        // Logic to create seller catalog
         return null;
     }
 
     async getSellerOrders() {
-        // get all seller orders
+        // Logic to get all seller orders
         return null;
     }
 }

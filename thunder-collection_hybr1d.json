@@ -1,0 +1,170 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "hybr1d",
+    "dateExported": "2022-05-17T12:16:35.834Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cf0df9ed-376e-444c-87db-6ec76a978bcf",
+            "colId": "3e554862-9cda-4206-b606-2facb69be632",
+            "containerId": "",
+            "name": "http://localhost:4000/api/product",
+            "url": "http://localhost:4000/api/product",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2022-05-17T12:15:08.561Z",
+            "modified": "2022-05-17T12:15:08.561Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Product Name\",\n    \"price\": 5040\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODM4NjhjY2E2ZWZhMmZkMjEzNmE3ZCIsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE2NTI3ODczNTMsImV4cCI6MTY1Mjc5MDk1M30.SyzQfQk8NxqnPE_w8MWVSCCRQTdqOjMsz9W9bLQa4Ks"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1ee842a6-ec75-43dd-9aaf-d68b3a5eb8b1",
+            "colId": "3e554862-9cda-4206-b606-2facb69be632",
+            "containerId": "",
+            "name": "http://localhost:4000/api/seller/create-catalog",
+            "url": "http://localhost:4000/api/seller/create-catalog",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2022-05-17T12:15:15.682Z",
+            "modified": "2022-05-17T12:15:15.682Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"products\": [\n    \"628387b7a530ef69a9493c4a\",\n    \"628387baa530ef69a9493c50\"\n  ]\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODM4NjhjY2E2ZWZhMmZkMjEzNmE3ZCIsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE2NTI3ODczNTMsImV4cCI6MTY1Mjc5MDk1M30.SyzQfQk8NxqnPE_w8MWVSCCRQTdqOjMsz9W9bLQa4Ks"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9e7f5407-9bc1-43e1-949c-ece2cc0053ae",
+            "colId": "3e554862-9cda-4206-b606-2facb69be632",
+            "containerId": "",
+            "name": "http://localhost:4000/api/seller/orders",
+            "url": "http://localhost:4000/api/seller/orders",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2022-05-17T12:15:21.360Z",
+            "modified": "2022-05-17T12:15:21.360Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODM4NjhjY2E2ZWZhMmZkMjEzNmE3ZCIsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE2NTI3ODczNTMsImV4cCI6MTY1Mjc5MDk1M30.SyzQfQk8NxqnPE_w8MWVSCCRQTdqOjMsz9W9bLQa4Ks"
+            },
+            "tests": []
+        },
+        {
+            "_id": "336463e4-be7e-4e96-a9c2-b9e6b8a8c6fc",
+            "colId": "3e554862-9cda-4206-b606-2facb69be632",
+            "containerId": "",
+            "name": "http://localhost:4000/api/auth/login",
+            "url": "http://localhost:4000/api/auth/login",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2022-05-17T12:15:27.858Z",
+            "modified": "2022-05-17T12:15:27.858Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"eni4sure-s\",\n  \"password\": \"password\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6ef4237a-4342-4408-bb3e-ac9b23f55d78",
+            "colId": "3e554862-9cda-4206-b606-2facb69be632",
+            "containerId": "",
+            "name": "http://localhost:4000/api/buyer/seller-catalog/6283868cca6efa2fd2136a7d",
+            "url": "http://localhost:4000/api/buyer/create-order/6283868cca6efa2fd2136a7d",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2022-05-17T12:15:37.584Z",
+            "modified": "2022-05-17T12:15:37.584Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"catalog\": \"62838c332c3a0526c1a9fa60\",\n    \"products\": [\"628387b7a530ef69a9493c4a\", \"628387b9a530ef69a9493c4d\" ]\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODM4NjM5Y2E2ZWZhMmZkMjEzNmE3NSIsInJvbGUiOiJidXllciIsImlhdCI6MTY1Mjc4ODY3MiwiZXhwIjoxNjUyNzkyMjcyfQ.GPY1aN3WajvmEuSdwHI4pyIEd5cDLOGGlFVHsCXZAtM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0876251f-4c35-46ad-bb74-2f309d069e26",
+            "colId": "3e554862-9cda-4206-b606-2facb69be632",
+            "containerId": "",
+            "name": "http://localhost:4000/api/buyer/seller-catalog/6283868cca6efa2fd2136a7d",
+            "url": "http://localhost:4000/api/buyer/seller-catalog/6283868cca6efa2fd2136a7d",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2022-05-17T12:15:54.956Z",
+            "modified": "2022-05-17T12:15:54.956Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODM4NjhjY2E2ZWZhMmZkMjEzNmE3ZCIsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE2NTI3ODg3MzYsImV4cCI6MTY1Mjc5MjMzNn0.OaA3sb2ppMaYhIhjcYXAEsEYuGZfgCHW5gobu1bhsO0"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ac1169b0-32a6-42b9-bc56-76627f33fd26",
+            "colId": "3e554862-9cda-4206-b606-2facb69be632",
+            "containerId": "",
+            "name": "http://localhost:4000/api/buyer/list-of-sellers",
+            "url": "http://localhost:4000/api/buyer/list-of-sellers",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2022-05-17T12:16:01.606Z",
+            "modified": "2022-05-17T12:16:01.606Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODM4NjhjY2E2ZWZhMmZkMjEzNmE3ZCIsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE2NTI3ODczNTMsImV4cCI6MTY1Mjc5MDk1M30.SyzQfQk8NxqnPE_w8MWVSCCRQTdqOjMsz9W9bLQa4Ks"
+            },
+            "tests": []
+        },
+        {
+            "_id": "298d4550-55b8-4694-8989-a87dc29c9723",
+            "colId": "3e554862-9cda-4206-b606-2facb69be632",
+            "containerId": "",
+            "name": "http://localhost:4000/api/auth/register",
+            "url": "http://localhost:4000/api/auth/register",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2022-05-17T12:16:20.053Z",
+            "modified": "2022-05-17T12:16:20.053Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"eni4sure-u\",\n  \"password\": \"password\",\n  \"role\": \"seller\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

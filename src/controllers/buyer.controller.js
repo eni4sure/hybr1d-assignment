@@ -13,7 +13,7 @@ class BuyerContoller {
     }
 
     async createOrder(req, res) {
-        const result = await BuyerServ.createOrder(req.body, req.params.sellerId);
+        const result = await BuyerServ.createOrder(req.body, req.$user._id, req.params.sellerId);
         res.status(201).send(response("order created", result));
     }
 }

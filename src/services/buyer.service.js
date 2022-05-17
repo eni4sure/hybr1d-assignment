@@ -1,4 +1,5 @@
 const User = require("./../models/user.model");
+const Order = require("./../models/order.model");
 const Catalog = require("./../models/catalog.model");
 const CustomError = require("./../utils/custom-error");
 

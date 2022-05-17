@@ -16,7 +16,7 @@ class BuyerService {
     async createOrder(data, buyerId, sellerId) {
         // Logic to create order
         if (!data.catalog) throw new CustomError("a seller catalog is required", 400);
-        if (!data.products || data.products.length < 1) throw new CustomError("a minimum of one products is required", 400);
+        if (!data.products || data.products.length < 1) throw new CustomError("a minimum of one product is required", 400);
 
         const order = {
             buyer: buyerId,

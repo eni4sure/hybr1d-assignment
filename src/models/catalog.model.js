@@ -6,7 +6,7 @@ const catalogSchema = new mongoose.Schema(
         seller: {
             type: Schema.Types.ObjectId,
             required: true,
-            ref: "seller"
+            ref: "user"
         },
         products: {
             type: [
@@ -25,13 +25,13 @@ const catalogSchema = new mongoose.Schema(
 );
 
 catalogSchema.pre("find", function (next) {
-    this.populate("seller");
+    this.populate("seller", "username createdAt");
     this.populate("products");
     next();
 });
 
 catalogSchema.pre("findOne", function (next) {
-    this.populate("seller");
+    this.populate("seller", "username createdAt");
     this.populate("products");
     next();
 });

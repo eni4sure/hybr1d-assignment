@@ -6,12 +6,12 @@ const orderSchema = new mongoose.Schema(
         buyer: {
             type: Schema.Types.ObjectId,
             required: true,
-            ref: "buyer"
+            ref: "user"
         },
         seller: {
             type: Schema.Types.ObjectId,
             required: true,
-            ref: "seller"
+            ref: "user"
         },
         catalog: {
             type: Schema.Types.ObjectId,
@@ -35,16 +35,16 @@ const orderSchema = new mongoose.Schema(
 );
 
 orderSchema.pre("find", function (next) {
-    this.populate("buyer");
-    this.populate("seller");
+    this.populate("buyer", "username createdAt");
+    this.populate("seller", "username createdAt");
     this.populate("catalog");
     this.populate("products");
     next();
 });
 
 orderSchema.pre("findOne", function (next) {
-    this.populate("buyer");
-    this.populate("seller");
+    this.populate("buyer", "username createdAt");
+    this.populate("seller", "username createdAt");
     this.populate("catalog");
     this.populate("products");
     next();

@@ -7,12 +7,16 @@ class SellerService {
         // Logic to create seller catalog
         if (!data.products || data.products.length < 1) throw new CustomError("a minimum of one product is required", 400);
 
-        const catalog = {
+        // Check if seller already has a catalog
+        const catalog = await Catalog.findOne({ seller: sellerId });
+        if (catalog) throw new CustomError("seller already has a catalog", 400);
+
+        const context = {
             seller: sellerId,
             products: data.products
         };
 
-        return await new Catalog(catalog).save();
+        return await new Catalog(context).save();
     }
 
     async getSellerOrders(sellerId) {

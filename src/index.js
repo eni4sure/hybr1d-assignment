@@ -5,7 +5,7 @@ const app = require("express")();
 require("./middlewares/pre-route.middleware")(app);
 
 // routes
-app.use(require("./routes"));
+app.use("/api", require("./routes"));
 
 // Error middlewares
 require("./middlewares/error.middleware")(app);

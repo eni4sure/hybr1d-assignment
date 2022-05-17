@@ -6,6 +6,10 @@ const CustomError = require("./../utils/custom-error");
 
 class AuthService {
     async register(data) {
+        if (!data.username) throw new CustomError("username is required");
+        if (!data.password) throw new CustomError("password is required");
+        if (!data.role) throw new CustomError("role is required");
+
         let user = await User.findOne({ username: data.username });
         if (user) throw new CustomError("username already exists");
 

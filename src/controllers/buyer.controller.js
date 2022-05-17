@@ -4,7 +4,7 @@ const BuyerServ = require("./../services/buyer.service");
 class BuyerContoller {
     async getAllSellers(req, res) {
         const result = await BuyerServ.getAllSellers();
-        res.status(201).send(response("all sellers", result));
+        res.status(200).send(response("all sellers", result));
     }
 
     async getSellerCatalog(req, res) {

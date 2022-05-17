@@ -6,7 +6,7 @@ const CustomError = require("./../utils/custom-error");
 class BuyerService {
     async getAllSellers() {
         // Logic to get all sellers
-        return await User.find({ role: "seller" });
+        return await User.find({ role: "seller" }).select("username createdAt");
     }
 
     async getSellerCatalog(sellerId) {

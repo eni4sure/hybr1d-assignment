@@ -8,10 +8,15 @@ const orderSchema = new mongoose.Schema(
             required: true,
             ref: "buyer"
         },
+        seller: {
+            type: Schema.Types.ObjectId,
+            required: true,
+            ref: "seller"
+        },
         catalog: {
             type: Schema.Types.ObjectId,
             required: false,
-            ref: "buyer"
+            ref: "catalog"
         },
         products: {
             type: [
@@ -29,15 +34,17 @@ const orderSchema = new mongoose.Schema(
     }
 );
 
-catalogSchema.pre("find", function (next) {
+orderSchema.pre("find", function (next) {
     this.populate("buyer");
+    this.populate("seller");
     this.populate("catalog");
     this.populate("products");
     next();
 });
 
-catalogSchema.pre("findOne", function (next) {
+orderSchema.pre("findOne", function (next) {
     this.populate("buyer");
+    this.populate("seller");
     this.populate("catalog");
     this.populate("products");
     next();
